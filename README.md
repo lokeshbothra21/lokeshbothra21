@@ -1,19 +1,44 @@
-👋 Hi, I’m @lokeshbothra21, a passionate newcomer to the world of data science, Python, and AI.
+# Hi, I'm Lokesh 👋
 
-👀 I’m interested in exploring the endless possibilities of data and how it can drive insights and innovation.
+**AI Engineer in Bangalore. I build agentic AI and RAG systems that run in production, and I measure whether they actually work.**
 
-🌱 I’m currently learning the fundamentals of data science, honing my Python skills, and diving into the exciting field of artificial intelligence.
+Most of my work is LangGraph multi-agent systems, hybrid retrieval and LLM evaluation (RAGAS plus custom metrics), on FastAPI and Google Cloud.
 
-💡 I’m eager to collaborate on beginner-friendly data science projects, where I can apply my knowledge and learn from experienced practitioners.
+## 🛡️ Featured: [AegisOps](https://github.com/lokeshbothra21/aegisops)
 
-📫 Reach out to me through email at lokesh8946891910@gmail.com.
+An autonomous incident-response agent over real OpenTelemetry data. Deterministic rules detect the incident. A LangGraph agent investigates logs, metrics, traces and recent changes. Then **code, not the LLM, checks every claim** before a human approves one of four safe fixes.
 
-😄 Pronouns: He/Him
+- Fault → open incident in **57 s** on a 15-service system, with zero false positives during warm-up
+- The verifier caught the model citing a metric that doesn't exist and cut its confidence from **0.86 to 0.57**
+- 9 read-only telemetry tools exposed over **MCP**, with every tool result treated as untrusted input
+- 17 ADRs, 109 tests (95% coverage), `mypy --strict`, CodeQL and keyless Cloud Run deploys
+- Built in public, with a [day-by-day engineering log](https://github.com/lokeshbothra21/aegisops/tree/main/docs/learning) that records what broke as well as what worked
 
-⚡ Fun fact: I'm an enthusiastic explorer and enjoy discovering new places.
+## What I've built at work
 
-<!---
-lokeshbothra21/lokeshbothra21 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+| System | What I did |
+|---|---|
+| **Scientific literature RAG** | Rebuilt the pipeline in LangGraph with sub-question decomposition, confidence-based abstention and prompt-injection isolation. RAGAS answer correctness went from **0.68 → 0.79** and context precision from **0.54 → 0.64**. Uses hybrid BM25 + FAISS search with cross-encoder reranking. |
+| **Multi-agent simulation platform** | LangGraph agents that run GROMACS, Quantum ESPRESSO and ORCA on containerised HPC. A self-verification step checks generated artifacts in a sandbox before any response reaches a user. |
+| **Text-to-SQL analytics agents** | Gemini agents with MCP access to BigQuery, SQL validation and self-correction loops (**95%+ query accuracy**). AI-generated Plotly code runs in a Docker sandbox, and Entra ID RBAC enforces access per dataset. |
+| **Enterprise RAG assistant** | Async document ingestion with Docling and Celery, retrieval over pgvector and Redis, and delta sync of mailboxes through Microsoft Graph. |
 
+Those systems are closed-source. AegisOps is where you can read my code.
+
+## Toolbox
+
+**AI:** LangGraph · LangChain · DeepAgents · Google ADK · MCP · RAG and multimodal RAG · hybrid retrieval · RAGAS  
+**Backend:** Python · FastAPI · SQLAlchemy · Celery · PostgreSQL · pgvector · Redis · BigQuery · FAISS · ChromaDB  
+**Infra:** GCP (Cloud Run, Cloud Build, Cloud SQL) · Docker · Kubernetes · OpenTelemetry · GitHub Actions
+
+## Certifications
+
+- Google Cloud Professional Cloud Architect (2026)
+- Microsoft Certified: Azure AI Engineer Associate (2026)
+- Google Cloud Associate Cloud Engineer (2025)
+
+## Get in touch
+
+📫 [lokesh8946891910@gmail.com](mailto:lokesh8946891910@gmail.com) · [LinkedIn](https://www.linkedin.com/in/lokeshbothra/) · [LeetCode](https://leetcode.com/u/lokesh21bothra/)
+
+<sub>he/him</sub>
